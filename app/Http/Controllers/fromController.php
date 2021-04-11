@@ -8,12 +8,12 @@ class fromController extends Controller
 {
     public function viewForm(){
 
-        return view('form');
+        return view('form',['title'=>'form']);
 
     }
 
     public function validationFields(Request $request)
-    {            dd($request);
+    {           
 
 
         $this->validate($request,[
