@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('form','fromController@viewForm');
+Route::get('form','formController@viewForm');
 
-Route::post('addData','fromController@validationFields');
+Route::post('addData','formController@add');
+
+Route::get('display','formController@display');
+Route::get('delete/{id}' ,'formController@delete');
+
