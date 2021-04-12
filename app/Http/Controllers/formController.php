@@ -43,7 +43,6 @@ public function display(){
 
 public function delete(Request $request){
     $id=$request->id;
-    $data=person::find($id);
     $query=person::where('id',$id)->delete();
     
 
